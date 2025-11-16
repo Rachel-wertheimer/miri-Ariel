@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הספירה לאירוע - מירי ואריאל</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="countdown-card">
+            <div class="image-container">
+                <img src="Image.jpeg" alt="מירי ואריאל" class="couple-image">
+            </div>
+            
+            <div class="content">
+                <h1 class="main-title">הספירה לאירוע</h1>
+                <p class="event-text">מירי & אריאל</p>
+                
+                <div class="dates">
+                    <div class="date-item">
+                        <span class="date-label">תאריך לועזי:</span>
+                        <span class="date-value">14/12/2025</span>
+                    </div>
+                    <div class="date-item">
+                        <span class="date-label">תאריך עברי:</span>
+                        <span class="date-value">כ"ד כסלו תשפ"ו</span>
+                    </div>
+                </div>
+                
+                <div class="countdown-container">
+                    <div id="countdown" class="countdown">
+                        <div class="time-unit">
+                            <span class="time-value" id="days">00</span>
+                            <span class="time-label">ימים</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="hours">00</span>
+                            <span class="time-label">שעות</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="minutes">00</span>
+                            <span class="time-label">דקות</span>
+                        </div>
+                        <div class="time-unit">
+                            <span class="time-value" id="seconds">00</span>
+                            <span class="time-label">שניות</span>
+                        </div>
+                    </div>
+                    <div id="event-message" class="event-message hidden">האירוע הגיע!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <p>&copy; <span id="current-year">2025</span></p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
