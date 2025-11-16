@@ -6,36 +6,37 @@
 
 body {
     font-family: 'Assistant', 'Heebo', Arial, sans-serif;
-    background: linear-gradient(135deg, #ffeef8 0%, #ffd6e8 50%, #ffb3d9 100%);
+    background: linear-gradient(135deg, #fdf6f0 0%, #f9e6d3 50%, #f5d5ba 100%);
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    padding: 20px;
+    padding: 40px 20px;
     color: #333;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 body::before {
-    content: '💕';
+    content: '💐';
     position: absolute;
-    font-size: 3rem;
-    opacity: 0.1;
+    font-size: 4rem;
+    opacity: 0.08;
     top: 10%;
     right: 10%;
-    animation: float 6s ease-in-out infinite;
+    animation: float 8s ease-in-out infinite;
 }
 
 body::after {
-    content: '💕';
+    content: '🌹';
     position: absolute;
-    font-size: 2rem;
-    opacity: 0.1;
+    font-size: 3rem;
+    opacity: 0.08;
     bottom: 15%;
     left: 15%;
-    animation: float 8s ease-in-out infinite reverse;
+    animation: float 10s ease-in-out infinite reverse;
 }
 
 @keyframes float {
@@ -50,17 +51,18 @@ body::after {
 .container {
     width: 100%;
     max-width: 800px;
-    margin: 0 auto;
+    margin: 40px auto;
+    flex-shrink: 0;
 }
 
 .countdown-card {
     background: rgba(255, 255, 255, 0.98);
     border-radius: 25px;
-    box-shadow: 0 20px 60px rgba(255, 105, 180, 0.3), 0 0 0 2px rgba(255, 182, 193, 0.5);
+    box-shadow: 0 25px 70px rgba(184, 134, 11, 0.25), 0 0 0 2px rgba(218, 165, 32, 0.3);
     overflow: hidden;
     backdrop-filter: blur(10px);
     animation: fadeIn 0.8s ease-in;
-    border: 1px solid rgba(255, 192, 203, 0.3);
+    border: 2px solid rgba(218, 165, 32, 0.2);
 }
 
 @keyframes fadeIn {
@@ -80,36 +82,38 @@ body::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(135deg, #fff0f5 0%, #ffe4e6 50%, #ffeef8 100%);
+    background: linear-gradient(135deg, #fffefb 0%, #fff8f0 50%, #fff5e6 100%);
     position: relative;
 }
 
 .image-container::before {
-    content: '💖';
+    content: '💐';
     position: absolute;
-    top: 10px;
-    right: 10px;
+    top: 15px;
+    right: 15px;
     font-size: 2rem;
-    opacity: 0.3;
+    opacity: 0.25;
 }
 
 .image-container::after {
-    content: '💖';
+    content: '🌹';
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 15px;
+    left: 15px;
     font-size: 2rem;
-    opacity: 0.3;
+    opacity: 0.25;
 }
 
 .couple-image {
     width: 100%;
     max-width: 500px;
     height: auto;
+    min-height: 200px;
     border-radius: 20px;
-    box-shadow: 0 15px 40px rgba(255, 105, 180, 0.4), 0 0 0 3px rgba(255, 182, 193, 0.3);
+    box-shadow: 0 20px 50px rgba(184, 134, 11, 0.3), 0 0 0 4px rgba(255, 248, 220, 0.6);
     object-fit: cover;
-    border: 3px solid rgba(255, 192, 203, 0.5);
+    border: 4px solid rgba(218, 165, 32, 0.4);
+    display: block;
 }
 
 .content {
@@ -120,19 +124,14 @@ body::after {
 .main-title {
     font-size: 2.5rem;
     font-weight: 700;
-    color: #c2185b;
-    margin-bottom: 15px;
-    letter-spacing: 1px;
-    text-shadow: 2px 2px 4px rgba(255, 182, 193, 0.3);
-}
-
-.event-text {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #d81b60;
-    margin-bottom: 30px;
+    color: #8b6914;
+    margin-bottom: 40px;
     letter-spacing: 2px;
-    text-shadow: 1px 1px 2px rgba(255, 182, 193, 0.3);
+    text-shadow: 2px 2px 4px rgba(218, 165, 32, 0.2);
+    background: linear-gradient(135deg, #8b6914 0%, #daa520 50%, #b8860b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .dates {
@@ -141,10 +140,10 @@ body::after {
     gap: 15px;
     margin-bottom: 40px;
     padding: 20px;
-    background: linear-gradient(135deg, #fff0f5 0%, #ffeef8 100%);
+    background: linear-gradient(135deg, #fffefb 0%, #fff8f0 100%);
     border-radius: 15px;
-    border: 2px solid rgba(255, 182, 193, 0.4);
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+    border: 2px solid rgba(218, 165, 32, 0.3);
+    box-shadow: 0 4px 15px rgba(184, 134, 11, 0.15);
 }
 
 .date-item {
@@ -156,12 +155,12 @@ body::after {
 
 .date-label {
     font-weight: 600;
-    color: #c2185b;
+    color: #8b6914;
 }
 
 .date-value {
     font-weight: 600;
-    color: #d81b60;
+    color: #b8860b;
     font-size: 1.2rem;
 }
 
@@ -181,16 +180,16 @@ body::after {
     flex-direction: column;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(135deg, #ff69b4 0%, #ff1493 50%, #c2185b 100%);
+    background: linear-gradient(135deg, #daa520 0%, #b8860b 50%, #8b6914 100%);
     border-radius: 15px;
-    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.5);
+    box-shadow: 0 8px 25px rgba(184, 134, 11, 0.4);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.3);
+    border: 2px solid rgba(255, 248, 220, 0.4);
 }
 
 .time-unit:hover {
     transform: translateY(-5px) scale(1.05);
-    box-shadow: 0 8px 25px rgba(255, 105, 180, 0.7);
+    box-shadow: 0 10px 30px rgba(184, 134, 11, 0.6);
 }
 
 .time-value {
@@ -213,17 +212,21 @@ body::after {
 .event-message {
     font-size: 2rem;
     font-weight: 700;
-    color: #c2185b;
+    color: #8b6914;
     padding: 20px;
-    background: linear-gradient(135deg, #fff0f5 0%, #ffeef8 100%);
+    background: linear-gradient(135deg, #fffefb 0%, #fff8f0 100%);
     border-radius: 15px;
-    border: 3px solid #ff69b4;
+    border: 3px solid #daa520;
     animation: pulse 2s infinite;
-    box-shadow: 0 6px 20px rgba(255, 105, 180, 0.4);
+    box-shadow: 0 6px 20px rgba(184, 134, 11, 0.3);
 }
 
 .event-message.hidden {
     display: none;
+}
+
+.hidden {
+    display: none !important;
 }
 
 @keyframes pulse {
@@ -236,11 +239,14 @@ body::after {
 }
 
 .footer {
-    margin-top: 30px;
+    margin-top: 40px;
+    margin-bottom: 20px;
     text-align: center;
-    color: rgba(194, 24, 91, 0.8);
+    color: rgba(139, 105, 20, 0.8);
     font-size: 0.9rem;
     font-weight: 500;
+    flex-shrink: 0;
+    width: 100%;
 }
 
 /* Responsive Design */
@@ -249,9 +255,6 @@ body::after {
         font-size: 2rem;
     }
     
-    .event-text {
-        font-size: 1.2rem;
-    }
     
     .countdown {
         grid-template-columns: repeat(2, 1fr);
@@ -298,9 +301,6 @@ body::after {
         font-size: 1.5rem;
     }
     
-    .event-text {
-        font-size: 1rem;
-    }
     
     .countdown {
         grid-template-columns: repeat(2, 1fr);

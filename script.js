@@ -1,5 +1,12 @@
-// Set the event date: December 14, 2025 at 00:00:00
-const eventDate = new Date('2025-12-14T00:00:00');
+// Set the event date: December 14, 2025 at 00:00:00 (local time)
+// Using local timezone to ensure correct countdown calculation
+const eventYear = 2025;
+const eventMonth = 11; // December (0-indexed: 0=Jan, 11=Dec)
+const eventDay = 14;
+const eventHour = 0;
+const eventMinute = 0;
+const eventSecond = 0;
+const eventDate = new Date(eventYear, eventMonth, eventDay, eventHour, eventMinute, eventSecond);
 
 // Get DOM elements
 const daysElement = document.getElementById('days');
@@ -43,9 +50,27 @@ function updateCountdown() {
     secondsElement.textContent = formatTime(seconds);
 }
 
+// Debug: Log event date for verification
+console.log('Event date:', eventDate);
+console.log('Current date:', new Date());
+console.log('Time difference (ms):', eventDate - new Date());
+
 // Update countdown immediately
 updateCountdown();
 
 // Update countdown every second
 setInterval(updateCountdown, 1000);
+
+// Image loading check
+window.addEventListener('load', function() {
+    const img = document.querySelector('.couple-image');
+    if (img) {
+        if (img.complete && img.naturalHeight !== 0) {
+            console.log('Image loaded successfully');
+        } else {
+            console.error('Image failed to load');
+            img.style.display = 'none';
+        }
+    }
+});
 
